@@ -11,7 +11,7 @@
                         <a href="{{route('alternative')}}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Profile Mitra</a>
                     </li>
                     <li>
-                        <a href="{{route('survey')}}" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Upload Survey</a>
+                        <a href="{{route('survey')}}" class="waves-effect"><i class="fa fa-upload fa-fw" aria-hidden="true"></i>Upload Survey</a>
                     </li>
                     <li>
                         <a href="{{route('variable')}}" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Data Mitra</a>

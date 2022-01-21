@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="white-box">
-                        <h3 class="box-title">List All Survey</h3>
+                        <h3 class="box-title">Histori Survey</h3>
                         <div class="table-responsive">
                             <table id="table-data" class="table">
                                 <thead>
@@ -125,8 +125,5 @@ $('#detailModal').on('show.bs.modal', function (event) {
   modal.find('.modal-footer p').text(data.detail);
 })
 
-$(document).ready(function(){
-    $('#tabel-data').DataTable();
-});
 </script>
 @endsection

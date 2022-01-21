@@ -17,9 +17,6 @@
     <link href="plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
     <!-- morris CSS -->
     <link href="plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
-    <!-- chartist CSS -->
-    <link href="plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
-    <link href="plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
     <!-- animation CSS -->
     <link href="css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -52,24 +49,20 @@
         <!-- ============================================================== -->
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header">
-                <div class="top-left-part">
-                    <!-- Logo -->
-                    <a class="logo" href="index.html">
-                        <!-- Logo icon image, you can use font-icon also --><b>
-                        <!--This is dark logo icon--><img src="plugins/images/admin-logo.png" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="plugins/images/admin-logo-dark.png" alt="home" class="light-logo" />
-                     </b>
-                        <!-- Logo text image you can use text also --><span class="hidden-xs">
-                        <!--This is dark logo text--><img src="plugins/images/admin-text.png" alt="home" class="dark-logo" /><!--This is light logo text--><img src="plugins/images/admin-text-dark.png" alt="home" class="light-logo" />
-                     </span> </a>
-                </div>
-                <!-- /Logo -->
                 <ul class="nav navbar-top-links navbar-right pull-right">
                     <li>
-                        <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
-                            <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
-                    </li>
-                    <li>
-                        <a class="profile-pic" href="#"> <img src="plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">Steave</b></a>
+                        <form method="POST" action="{{ route('logout') }}">
+                        <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i><b class="hidden-xs">{{Auth::user()->username}}</b></a>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                             <li role="separator" class="divider"></li>
+                            <li><input type="submit" value="Logout"></li>
+                        </ul>
+                        </div>
+                            @csrf
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -88,7 +81,7 @@
         <!-- ============================================================== -->
         <!-- Page Content -->
         <!-- ============================================================== -->
-        <div id="page-wrapper">
+        {{-- <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -343,9 +336,10 @@
                     </div>
                     <!-- /.col -->
                 </div>
-            </div>
+            </div> --}}
+            @yield('content')
             <!-- /.container-fluid -->
-            <footer class="footer text-center"> 2017 &copy; Ample Admin brought to you by wrappixel.com </footer>
+            <footer class="footer text-center"> 2022 &copy; Mitra Bulog by Jefri S </footer>
         </div>
         <!-- ============================================================== -->
         <!-- End Page Content -->
@@ -370,14 +364,11 @@
     <script src="plugins/bower_components/waypoints/lib/jquery.waypoints.js"></script>
     <script src="plugins/bower_components/counterup/jquery.counterup.min.js"></script>
     <!-- chartist chart -->
-    <script src="plugins/bower_components/chartist-js/dist/chartist.min.js"></script>
-    <script src="plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
     <!-- Sparkline chart JavaScript -->
     <script src="plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
-    <script src="js/dashboard1.js"></script>
-        <script>
+        {{-- <script>
         $(document).ready(function () {
         $.toast({
          heading: 'Welcome to Ample admin',
@@ -389,8 +380,9 @@
          stack: 6
         })
             });
-        </script>
+        </script> --}}
     <script src="plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+    @yield('addJs')
 
 
 </body>

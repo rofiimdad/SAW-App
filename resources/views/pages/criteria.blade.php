@@ -80,7 +80,7 @@
                 @csrf
                     <input id="id" name="id" hidden/>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Nama Mitra:</label>
+                        <label for="recipient-name" class="col-form-label">Nama Kriteria:</label>
                         <input type="text" class="form-control" id="name"  name="name">
 
                     </div>
