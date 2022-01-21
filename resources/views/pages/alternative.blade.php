@@ -45,7 +45,7 @@
                                 <thead>
                                     <tr >
                                         <th>No</th>
-                                        <th>Kritetia</th>
+                                        <th>Nama Mitra</th>
                                         <th>Alamat</th>
                                         <th>Kontak</th>
                                         <th class="text-center">Aksi</th>
